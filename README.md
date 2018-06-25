@@ -1,13 +1,17 @@
-# AutoOrc
+# AutoOrc V1.0- AWS Lambda Instance Auto-Orchestration
 Auto start/stop AWS EC2 &amp; RDS Instances
 
 ## Usage
 ### Copy the lambda_function.py contents to a new blank Lambda.
+(This script works regionally, you'll have to create a separate Lambda in every AWS region you want to control your instances)
 #### Settings:
 * Runtime : Python 3.6
 * Handler : lambda_function.lambda_handler
 * Memory : 128 MB
 * Timeout : 30 sec
+
+#### Setup
+
 
 Add tags to your EC2 and RDS (non multi-az supported only) Instances that match the scripts variables:
 
@@ -19,7 +23,7 @@ The values for these tags should be the UTC time you want the Instance to start 
 
 Change these variables if you want to use different AWS tags.
 
-By default this auto-stops items every day, and only starts Intances on weekdays. To start instances every day at the tagged time, change:
+By default this auto-stops items every day, and only starts Instances on weekdays. To start instances every day at the tagged time, change:
 
 >weekdays = True
 
