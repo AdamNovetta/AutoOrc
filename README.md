@@ -14,23 +14,22 @@ Auto start/stop AWS EC2 &amp; RDS Instances
 
 
 Add tags to your EC2 and RDS (non multi-az supported only) Instances that match the scripts variables:
-
->start = "autoOrc-up"
-
->stop = "autoOrc-down"
-
+```python
+start = "autoOrc-up"
+stop = "autoOrc-down"
+```
 The values for these tags should be the UTC time you want the Instance to start and stop accordingly, e.g. 19:30
 
 Change these variables if you want to use different AWS tags.
 
 By default this auto-stops items every day, and only starts Instances on weekdays. To start instances every day at the tagged time, change:
-
->weekdays = True
-
+```python
+weekdays = True
+```
 to
-
->weekdays = False
-
+```python
+weekdays = False
+```
 
 #### Trigger
 Create a CloudWatch rule, that runs on a schedule of fixed rate every 1 minute, and target it to the AutoOrc Lambda
