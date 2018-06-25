@@ -21,29 +21,29 @@ to
 >weekdays = False
 
 
-Permissions required:
-*cloudwatch:PutMetricData
-*ec2:DescribeInstances
-*ec2:DescribeInstanceStatus
-*ec2:DescribeTags
-*ec2:StartInstances
-*ec2:StopInstances
-*logs:CreateLogGroup
-*logs:CreateLogStream
-*logs:DeleteLogGroup
-*logs:DeleteLogStream
-*logs:DescribeDestinations
-*logs:DescribeLogGroups
-*logs:DescribeLogStreams
-*logs:DescribeMetricFilters
-*logs:DescribeResourcePolicies
-*logs:FilterLogEvents
-*logs:GetLogEvents
-*logs:ListTagsLogGroup
-*logs:PutLogEvents
-*logs:TagLogGroup
-*rds:DescribeDBInstances
-*rds:ListTagsForResource
-*rds:StartDBInstance
-*rds:StopDBInstance
-*sts:GetCallerIdentity
+### Permissions required:
+* cloudwatch:PutMetricData
+* ec2:DescribeInstances
+* ec2:DescribeInstanceStatus
+* ec2:DescribeTags
+* ec2:StartInstances
+* ec2:StopInstances
+* logs:CreateLogGroup
+* logs:CreateLogStream
+* logs:DeleteLogGroup
+* logs:DeleteLogStream
+* logs:DescribeDestinations
+* logs:DescribeLogGroups
+* logs:DescribeLogStreams
+* logs:DescribeMetricFilters
+* logs:DescribeResourcePolicies
+* logs:FilterLogEvents
+* logs:GetLogEvents
+* logs:ListTagsLogGroup
+* logs:PutLogEvents
+* logs:TagLogGroup
+* rds:DescribeDBInstances
+* rds:ListTagsForResource
+* rds:StartDBInstance
+* rds:StopDBInstance
+* sts:GetCallerIdentity
