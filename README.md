@@ -2,6 +2,7 @@
 Auto start/stop AWS EC2 &amp; RDS Instances
 
 ### Usage
+## Copy the lambda_function.py contents to a new blank Lambda.
 Add tags to your EC2 and RDS (non multi-az supported only) Instances that match the scripts variables:
 
 >start = "autoOrc-up"
@@ -21,7 +22,10 @@ to
 >weekdays = False
 
 
-### Permissions required:
+### Trigger
+Create a CloudWatch rule, that runs on a schedule of fixed rate every 1 minute, and target it to the AutoOrc Lambda
+
+### Permissions required for Lambda Role:
 * cloudwatch:PutMetricData
 * ec2:DescribeInstances
 * ec2:DescribeInstanceStatus
