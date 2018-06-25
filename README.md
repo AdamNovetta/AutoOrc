@@ -20,7 +20,7 @@ stop = "autoOrc-down"
 ```
 The values for these tags should be the **UTC time** you want the Instance to start and stop accordingly, e.g. 19:30
 
-Change these variables if you want to use different AWS tags.
+Change these variable values if you want to use different AWS tags.
 
 By default this auto-stops items every day, and only auto-starts Instances on weekdays. 
 
@@ -34,7 +34,7 @@ weekdays = False
 ```
 
 #### Trigger
-Create a CloudWatch rule, that runs on a schedule of fixed rate every 1 minute, and target it to the AutoOrc Lambda
+Create a CloudWatch rule that runs on a schedule of fixed rate every 1 minute, and target it to the AutoOrc Lambda.
 
 #### Permissions required for Lambda Role:
 * cloudwatch:PutMetricData
