@@ -1,4 +1,5 @@
-# AutoOrc V1.0- AWS Lambda based Instance Auto-Orchestration
+# AutoOrc - 1.0
+## AWS Lambda based Instance Auto-Orchestration
 Auto start/stop AWS EC2 &amp; RDS Instances
 
 ## Usage
