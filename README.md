@@ -1,4 +1,4 @@
-# AutoOrc V1.0- AWS Lambda Instance Auto-Orchestration
+# AutoOrc V1.0- AWS Lambda based Instance Auto-Orchestration
 Auto start/stop AWS EC2 &amp; RDS Instances
 
 ## Usage
@@ -24,7 +24,7 @@ Change these variables if you want to use different AWS tags.
 
 By default this auto-stops items every day, and only auto-starts Instances on weekdays. 
 
-If you want to start instances every day at the tagged time, change:
+If you want to start Instances every day at the tagged time, change:
 ```python
 weekdays = True
 ```
