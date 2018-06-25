@@ -22,7 +22,9 @@ The values for these tags should be the **UTC time** you want the Instance to st
 
 Change these variables if you want to use different AWS tags.
 
-By default this auto-stops items every day, and only starts Instances on weekdays. To start instances every day at the tagged time, change:
+By default this auto-stops items every day, and only auto-starts Instances on weekdays. 
+
+If you want to start instances every day at the tagged time, change:
 ```python
 weekdays = True
 ```
