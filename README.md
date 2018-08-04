@@ -23,7 +23,7 @@ The values for these tags should be the **UTC time** you want the Instance to st
 
 Change these variable values if you want to use different AWS tags.
 
-By default this auto-stops items every day, and only auto-starts Instances on weekdays. 
+By default this auto-stops items every day, and only auto-starts Instances on weekdays.
 
 If you want to start Instances every day at the tagged time, change:
 ```python
@@ -37,7 +37,7 @@ weekdays = False
 #### Trigger
 Create a CloudWatch rule that runs on a schedule of fixed rate every 1 minute, and target it to the AutoOrc Lambda.
 
-#### Permissions required for Lambda Role:
+#### IAM Permissions required for Lambda Role:
 * cloudwatch:PutMetricData
 * ec2:DescribeInstances
 * ec2:DescribeInstanceStatus
@@ -63,4 +63,3 @@ Create a CloudWatch rule that runs on a schedule of fixed rate every 1 minute, a
 * rds:StartDBInstance
 * rds:StopDBInstance
 * sts:GetCallerIdentity
-
