@@ -30,15 +30,11 @@ def putCloudWatchMetric(metricName, value, process, outcome):
             'MetricName': metricName,
             'Value': value,
             'Unit': 'Count',
-            'Dimensions': [{
-                'Name': 'Process',
-                'Value': process
-                },
-                {
-                'Name': 'Outcome',
-                'Value': outcome
-                }]
-            }]
+            'Dimensions': [
+                {'Name': 'Process', 'Value': process},
+                {'Name': 'Outcome', 'Value': outcome}
+            ]
+        }]
     )
 
 
@@ -145,8 +141,8 @@ def lambda_handler(event, context):
                     "---> Starting instance: \n\t" + instance.id +
                     " [ Name : " + name + " ] "
                 )
-            response = instance.start()
-            StateCode = response['StartingInstances'][0]['CurrentState']['Code']
+            resp = instance.start()
+            StateCode = resp['StartingInstances'][0]['CurrentState']['Code']
 
             if StateCode in BadStartCodes:
                 ErrorCounter += 1
